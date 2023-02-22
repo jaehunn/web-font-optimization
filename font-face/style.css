@@ -17,8 +17,9 @@
 
     *특정 브라우저에서 지원하는 파일 형식을 살펴볼 필요가 있습니다.
   */
-  src: url("../fonts/Pretendard-Medium.woff2") format("eot"),
-    url("../fonts/Pretendard-Light.woff2") format("woff2"), local("AppleGothic");
+  src: url("../fonts/woff2/Pretendard-Medium.woff2") format("eot"),
+    url("../fonts/woff2/Pretendard-Light.woff2") format("woff2"),
+    local("AppleGothic");
 
   /*
     font-weight 으로 값을 지정하게 되면, 해당 값을 사용하는 사용처는 선언한 font-family 로 적용됩니다.
@@ -30,7 +31,7 @@
 @font-face {
   font-family: "My Font";
 
-  src: url("../fonts/Pretendard-Medium.woff2") format("woff2");
+  src: url("../fonts/woff2/Pretendard-Medium.woff2") format("woff2");
 
   font-weight: 500;
 }

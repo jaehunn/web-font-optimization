@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+      3. unicode-range 까지를 고려한 Dynamic Subset 폰트 파일을 사용할 수 있다.
+
+      Pretendard-Medium woff2 형식
+          서브셋 폰트 파일, 274kB
+          다이나믹 서브셋 폰트 파일, 89.4kB = 26.6kB(85번) + 24.5kB(90번) + 38.3(91번)
+
+          약 68% 절감.
+
+      *unicode-range 범위를 알려면, pretendardvariable-dynamic-subset.css 파일을 로드해서, font-face 에 정의된 폰트들을 다운로드받도록 한다.
+     -->
+
+    <link
+      rel="stylesheet"
+      href="../fonts/pretendardvariable-dynamic-subset.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Optimization - Reduce Font Size</title>
+  </head>
+  <body>
+    <div>
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur 안녕하세요. adipisicing elit.
+        Dolor minus natus nisi cupiditate maiores iusto blanditiis similique!
+        Maiores illo quaerat consequuntur culpa fugiat tempore nostrum ipsa ab,
+        distinctio labore commodi voluptatibus voluptas, incidunt sed ea quos
+        facere nulla earum, iusto dolores! Corrupti sint saepe laborum
+        recusandae, quo fuga velit. Sint.
+      </p>
+      <h2>안녕하세요?</h2>
+      <span>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum delectus
+        architecto, deserunt reprehenderit facilis numquam ex eligendi quae
+        incidunt dignissimos maiores earum quibusdam obcaecati laudantium minima
+        praesentium cumque vel ut quaerat odio. Fuga doloribus explicabo
+        consectetur voluptatum hic perspiciatis architecto iusto molestias
+        deserunt in odit temporibus ut, a, quae odio error? Perspiciatis magni
+        cum labore rem praesentium nemo veniam eaque et illum incidunt maiores
+        minima voluptates sed quidem, iure quaerat temporibus dolorum, quod ea!
+        Similique et commodi iure alias ratione? Officiis, voluptatibus corporis
+        accusantium vitae natus quas? Cum ad qui enim? Rem, laudantium? Aperiam
+        quas blanditiis pariatur nam aliquid doloremque.
+      </span>
+    </div>
+  </body>
+</html>
