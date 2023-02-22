@@ -12,12 +12,12 @@
 */
 @font-face {
   font-family: "My woff Font";
-  src: url("../fonts/woff/Pretendard-Medium.woff") format("woff");
+  src: url("../../fonts/woff/Pretendard-Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: "My woff2 Font";
-  src: url("../fonts//woff2/Pretendard-Medium.woff2") format("woff2");
+  src: url("../../fonts/woff2/Pretendard-Medium.woff2") format("woff2");
 }
 
 /* 
@@ -31,7 +31,7 @@
 */
 @font-face {
   font-family: "My woff2 Subset Font";
-  src: url("../fonts/woff2-subset/Pretendard-Medium.subset.woff2")
+  src: url("../../fonts/woff2-subset/Pretendard-Medium.subset.woff2")
     format("woff2");
 }
 
