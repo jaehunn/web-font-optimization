@@ -9,3 +9,18 @@ Critical Rendering Path 는 브라우저가 HTML 을 화면에 렌더링하는 �
 
 CSS 를 받고 CSSDOM 으로 만드는 과정에서 외부 웹 폰트를 받아오게 된다.
 이 때, Painting 과정으로 넘어가도 웹 폰트 로드가 끝나지않았다면, 해당 웹 폰트를 사용하는 컨텐츠의 렌더링을 차단하는 현상이 발생한다.
+
+다음과 같은 방식들로 웹 폰트 로드의 최적화를 도울 수 있다.
+
+1. Font 사이즈 줄이기.
+
+   1. Font Format (WOFF 2.0)
+   2. Subset Font
+   3. Dynamic Subset Font (Unicode Range)
+
+2. Rendering Block 사용하기.
+
+   1. Flash Of Unstyled Text (FOIT)
+   2. Flash Of Invisible Text (FOUT)
+   3. Font Face Observer Library
+   4. CSS font-display Attribute
