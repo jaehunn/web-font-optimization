@@ -1,0 +1,39 @@
+/* 
+    브라우저는 웹 폰트가 로드되지않았으면, 해당 폰트를 사용하는 컨텐츠의 렌더링을 차단해버린다.
+    차단했을 때의 동작은 두 브라우저 계열마다 다른데.
+    
+    IE 계열은 Flash Of Unstyled Text(FOUT) 방식을 채택하고,
+    그외 브라우저 계열은 Flash Of Invisible Text(FOIT) 방식을 채택해 처리한다.
+
+    FOIT 방식은 Invisible Text 에서 알 수 있듯이 폰트가 로드되기 전에는 렌더링을 차단해 해당 컨텐츠가 나오지않도록 한다.
+    FOUT 은 일단 Unstyled 된 Text 가 나오고, 폰트가 로드되면 적용되는 방식이다.
+
+    중요한 컨텐츠를 꼭 보여주어야한다면, FOUT 방식으로 최적화할 수 있다.
+
+    *Chrome 개발자도구 > Network > Throttling 을 Fast 3G 으로 변경하여 Rendering Block 을 테스트한다.
+
+    font-display 속성값으로 렌더링 차단 옵션을 지정할 수 있다.
+    1. swap (FOUT)
+    2. block (FOIT)
+    3. fallback (100ms FOIT 되고, 3초 FOUT 된다. -> 3초 내에 폰트가 로드되면 대체되지만 그렇지 않으면 대체되지않는다.)
+    4. optional (100ms FOIT 되고 이후 폰트가 로드되도 교체되지 않는다.) 
+    
+
+    font-display: optional 을 제외하고 FOIT/FOUT 시 re-layouting 이 발생해 레이아웃이 밀리는 현상(Layout Shift) 이 발생한다. -> font 파일을 preload 하여 해결 할 수 있다. 
+
+    FOIT/FOUT Layout Shift [https://web.dev/optimize-cls/]
+    Resource Preload [https://developer.mozilla.org/ko/docs/Web/HTML/Attributes/rel/preload]
+*/
+@font-face {
+  font-family: "My FOUT Font";
+  src: url("../../fonts/woff2/Pretendard-Medium.woff2");
+
+  /* 
+    FOIT 되어 폰트 로드동안 컨텐츠가 보이지 않는다.
+  */
+  font-display: block;
+}
+
+body {
+  font-family: "My FOUT Font";
+}
