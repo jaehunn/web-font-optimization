@@ -16,10 +16,11 @@
     format() 으로 정의한 파일 형식 eot 는 Chrome 브라우저에서 지원하지 않기 때문입니다.
 
     *특정 브라우저에서 지원하는 파일 형식을 살펴볼 필요가 있습니다.
+    *format() 으로 명시적인 파일 형식을 밝히지않으면, 불필요한 다운로드가 일어날 수 있습니다.
   */
-  src: url("../fonts/woff2/Pretendard-Medium.woff2") format("eot"),
-    url("../fonts/woff2/Pretendard-Light.woff2") format("woff2"),
-    local("AppleGothic");
+  src: url("../fonts/ttf/Pretendard-Medium.ttf") format("eot"),
+    url("../fonts/woff2/Pretendard-Medium.woff2"),
+    url("../fonts/woff2/Pretendard-Light.woff2"), local("AppleGothic");
 
   /*
     font-weight 으로 값을 지정하게 되면, 해당 값을 사용하는 사용처는 선언한 font-family 로 적용됩니다.
@@ -27,14 +28,14 @@
   */
   font-weight: 300;
 }
-
+/* 
 @font-face {
   font-family: "My Font";
 
   src: url("../fonts/woff2/Pretendard-Medium.woff2") format("woff2");
 
   font-weight: 500;
-}
+} */
 
 @font-face {
   font-family: "My Font";
@@ -74,5 +75,5 @@ p {
 
     @see Fallback Weight Rule [https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#fallback_weights]
   */
-  font-weight: 400;
+  font-weight: 300;
 }

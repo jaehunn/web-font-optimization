@@ -20,7 +20,7 @@ CSS 를 받고 CSSDOM 으로 만드는 과정에서 외부 웹 폰트를 받아�
 
 2. Rendering Block 사용하기.
 
-   1. Flash Of Unstyled Text (FOIT)
-   2. Flash Of Invisible Text (FOUT)
+   1. Flash Of Invisible Text (FOIT)
+   2. Flash Of Unstyled Text (FOUT)
    3. Font Face Observer Library
    4. CSS font-display Attribute
